@@ -1,0 +1,23 @@
+version: '2.1'
+
+services:
+  backend:
+    build:
+      context: ./backend
+  nginx:
+    build: ./nginx
+    restart: always
+    ports:
+      - 8888:8888
+    depends_on:
+      - backend
+  frontend2:
+    build:
+      context: ./frontend2
+    environment:
+      - NODE_ENV=development
+      - LOVE_NAME
+    depends_on:
+      - backend
+    links:
+      - backend
