@@ -12,16 +12,15 @@ wish_blueprint = Blueprint('wish_blueprint', __name__)
 
 def send_email(email, wish):
 
-    sender = 'wish@mail.exampledomain.com'
+    sender = 'wish@luck.com'
     receivers = [email]
 
-    message = MIMEText('你收到了愿望，内容是：{}'.format(
+    message = MIMEText('玲玲许了一个愿望,内容是：{}'.format(
         wish), 'plain', 'utf-8')
     message['From'] = formataddr(
         (str(Header('玲玲', 'utf-8')), sender))
     message['To'] = formataddr((str(Header(email, 'utf-8')), email))
-    message['Subject'] = Header('玲玲许了一个愿望,内容是：{}'.format(
-        wish), 'utf-8')
+    message['Subject'] = Header('你收到了玲玲的愿望', 'utf-8')
 
     try:
         smtpObj = smtplib.SMTP('localhost')
@@ -33,6 +32,6 @@ def send_email(email, wish):
 @wish_blueprint.route('/wish', methods=['POST'])
 def get_wish():
     info = request.get_json()
-    send_email("1042671582@qq.com", info["wish"])
+    send_email("lvjialer@gmail.com", info["wish"])
     return jsonify({'status': "success"})
 

@@ -5,15 +5,18 @@ import FormControl from 'react-bootstrap/FormControl'
 import axios from 'axios';
 import './App.css';
 var text = [
-    "这是专属于你的一个小小网站，玲玲。",
+    "这是专属于你的一个小小网站。",
     "这个网站之所以出现在你的面前，是因为我刚刚梦到了一个欣喜若狂的女孩。",
     "所以我花了一小时，描绘了我在梦中看到的这个网站。",
     "希望你喜欢。",
-    "这是你我之间的秘密，今天不要告诉别人呢。",
+    "这首曲目名叫concerto d'amore，意思是\"爱的协奏曲\"。",
+    "2019年儿童节，我们邂逅于清华大学军乐队专场音乐会。",
+    "转眼间，我们相识一周年了。",
+    "让我们一起回忆这一年那些难忘的瞬间吧。",
     "别忘了许个愿哦。",
-    "七夕快乐。"
+    "儿童节快乐。"
 ]
-var command = "LvJialer> "
+var command = "LüJialer> "
 class App extends Component {
     constructor(props) {
         super(props);

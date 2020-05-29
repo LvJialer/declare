@@ -16,7 +16,6 @@ services:
       context: ./frontend2
     environment:
       - NODE_ENV=development
-      - LOVE_NAME
     depends_on:
       - backend
     links:
