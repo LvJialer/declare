@@ -5,7 +5,7 @@ import FormControl from 'react-bootstrap/FormControl'
 import axios from 'axios';
 import './App.css';
 var text = [
-    "这是专属于你的一个小小网站。",
+    "这是专属于你的一个小小网站，玲玲。",
     "这个网站之所以出现在你的面前，是因为我刚刚梦到了一个欣喜若狂的女孩。",
     "所以我花了一小时，描绘了我在梦中看到的这个网站。",
     "希望你喜欢。",
